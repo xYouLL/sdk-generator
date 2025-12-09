@@ -35,7 +35,7 @@ class TypeScript extends LanguageMeta {
         }
         type = `${LanguageMeta.toPascalCase(relatedCollection.name)} | string`;
         if ((attribute.relationType === 'oneToMany' && attribute.side === 'parent') || (attribute.relationType === 'manyToOne' && attribute.side === 'child') || attribute.relationType === 'manyToMany') {
-          type = `${type}[] | string[]`;
+          type = `${type}[]`;
         }
         break;
       case AttributeType.POINT:
